@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mehmet C. Aksit — Software Engineer, M.S. Software Engineering @ Arizona State University, open to remote Java Backend opportunities." />
+  <title>MehmetOS | Mehmet C. Aksit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot-screen" aria-label="Boot screen">
+    <div class="bios-frame">
+      <div class="bios-topline">MEHMETOS UEFI BIOS UTILITY — ADVANCED MODE</div>
+      <div class="bios-grid">
+        <section>
+          <h1>MehmetOS</h1>
+          <p class="mono muted">Portfolio Workstation v3.0 • GitHub Pages Ready</p>
+          <div id="bootLog" class="boot-log"></div>
+        </section>
+        <aside class="bios-card">
+          <div class="chip">ROLE</div><strong>Software Engineer</strong>
+          <div class="chip">EXP</div><strong>3+ Years Professional Experience</strong>
+          <div class="chip">EDU</div><strong>M.S. Software Engineering @ ASU</strong>
+          <div class="chip">SEEK</div><strong>Remote Java Backend Developer Roles</strong>
+        </aside>
+      </div>
+      <button id="enterBtn" class="enter-btn hidden">Press Enter / Click to Launch Desktop</button>
+    </div>
+  </div>
+
+  <main id="desktop" class="desktop hidden">
+    <div class="wallpaper-orb orb-a"></div>
+    <div class="wallpaper-orb orb-b"></div>
+
+    <section class="hero-card glass">
+      <p class="eyebrow">MehmetOS Desktop</p>
+      <h2>Mehmet C. Aksit</h2>
+      <p class="title-line">Software Engineer</p>
+      <p class="hero-line">M.S. Software Engineering @ Arizona State University 🇺🇸</p>
+      <p class="hero-line">3+ Years of Professional Experience</p>
+      <p class="hero-status">Actively Seeking Remote Java Backend Opportunities</p>
+      <div class="badges">
+        <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span><span>Distributed Systems</span>
+      </div>
+    </section>
+
+    <nav class="desktop-icons" aria-label="Desktop applications">
+      <button class="icon" data-open="about"><span>👤</span><b>About</b></button>
+      <button class="icon" data-open="experience"><span>💼</span><b>Experience</b></button>
+      <button class="icon" data-open="education"><span>🎓</span><b>Education</b></button>
+      <button class="icon" data-open="projects"><span>🚀</span><b>Projects</b></button>
+      <button class="icon" data-open="skills"><span>🛠️</span><b>Skills</b></button>
+      <button class="icon" data-open="terminal"><span>💻</span><b>Terminal</b></button>
+      <button class="icon" data-open="snake"><span>🎮</span><b>Snake</b></button>
+      <button class="icon" data-open="contact"><span>📧</span><b>Contact</b></button>
+    </nav>
+
+    <section id="windows"></section>
+
+    <div id="contextMenu" class="context-menu hidden">
+      <button data-open="terminal">Open Terminal</button>
+      <button data-open="about">About Mehmet</button>
+      <button id="refreshDesktop">Refresh Desktop</button>
+    </div>
+
+    <footer class="taskbar glass">
+      <button id="startBtn" class="start-btn">▦ Start</button>
+      <div id="startMenu" class="start-menu hidden">
+        <strong>MehmetOS</strong>
+        <button data-open="about">About</button>
+        <button data-open="experience">Experience</button>
+        <button data-open="projects">Projects</button>
+        <button data-open="terminal">Terminal</button>
+        <button data-open="snake">Snake</button>
+        <button data-open="contact">Contact</button>
+      </div>
+      <div id="runningApps" class="running-apps"></div>
+      <div class="tray"><span>Arizona, USA</span><span id="clock">--:--</span></div>
+    </footer>
+  </main>
+
+  <template id="windowTemplate">
+    <article class="window glass">
+      <header class="window-bar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <strong class="window-title"></strong>
+        <button class="close" aria-label="Close window">×</button>
+      </header>
+      <div class="window-content"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
